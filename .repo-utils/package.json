@@ -1,0 +1,40 @@
+{
+  "name": "@zackheil/repo-utils",
+  "version": "0.0.0",
+  "description": "Internal meta-utils",
+  "license": "UNLICENSED",
+  "private": true,
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rapidstack/npm.git"
+  },
+  "author": {
+    "name": "Zack Heil",
+    "url": "https://github.com/zackheil"
+  },
+  "bugs": {
+    "url": "https://github.com/rapidstack/npm/issues"
+  },
+  "homepage": "https://github.com/rapidstack/npm#readme",
+  "bin": {
+    "rs-build-pkg": "./bin/commands/build-package/index.js",
+    "rs-build-plugin": "./bin/commands/build-plugin/index.js",
+    "rs-build-all": "./bin/commands/build-all/index.js",
+    "rs-publish-all": "./bin/commands/publish-all/index.js",
+    "rs-version-all": "./bin/commands/version-all/index.js",
+    "rs-draw": "./bin/commands/draw/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "postinstall": "npm run build"
+  },
+  "devDependencies": {
+    "@types/glob": "8.1.0",
+    "glob": "9.3.4"
+  },
+  "engines": {
+    "npm": ">=8.0.0 <10.0.0",
+    "node": ">=16.0.0 <19.0.0"
+  }
+}

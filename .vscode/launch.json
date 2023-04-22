@@ -1,0 +1,25 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Launch Program",
+      "skipFiles": [
+        "<node_internals>/**",
+        "${workspaceFolder}/packages/lambda/src/helpers/#SuperHelpers/Logger/**/*.ts",
+        "${workspaceFolder}/packages/lambda/src/util/guard.ts",
+        "${workspaceFolder}/node_modules/pino*/**/*.js"
+      ],
+      "osx": {
+        "runtimeVersion": "16"
+      },
+      "preLaunchTask": "tsc: build - tsconfig.json",
+      "program": "${workspaceFolder}/packages/lambda/src/_demo.ts",
+      "outFiles": ["${workspaceFolder}/packages/lambda/dist/**/*.js"]
+    }
+  ]
+}

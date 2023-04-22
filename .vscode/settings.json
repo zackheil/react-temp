@@ -1,0 +1,58 @@
+{
+  "[javascriptreact]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[javascript]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[json]": {
+    "editor.tabSize": 2
+  },
+  "[typescriptreact]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[typescript]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[html]": {
+    "editor.tabSize": 2
+  },
+  "todo-tree.filtering.excludeGlobs": ["**/node_modules", "**/dist", "**/build"],
+  "vsicons.associations.files": [
+    {
+      "icon": "nsri",
+      "filename": true,
+      "extensions": ["qodana.yml", "qodana.sarif.json"],
+      "format": "svg",
+      "overrides": "yaml"
+    },
+    {
+      "icon": "tsconfig",
+      "filename": true,
+      "extensions": ["tsconfig.react.json"],
+      "format": "svg"
+    }
+  ],
+  "vsicons.associations.folders": [
+    { "icon": "private", "extensions": ["errors"], "format": "svg" },
+    { "icon": "include", "extensions": ["global"], "format": "svg" },
+    { "icon": "tools", "extensions": [".repo-utils"], "format": "svg" },
+    { "icon": "json", "extensions": ["inputs"], "format": "svg" }
+  ],
+}

@@ -1,0 +1,76 @@
+{
+  "name": "@zackheil/react",
+  "license": "UNLICENSED",
+  "description": "Private package for Rapid Stack's core React UI components and utilities.",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rapidstack/npm.git",
+    "directory": "packages/react"
+  },
+  "author": {
+    "name": "Zack Heil",
+    "url": "https://github.com/zackheil"
+  },
+  "bugs": {
+    "url": "https://github.com/rapidstack/npm/issues"
+  },
+  "homepage": "https://github.com/rapidstack/npm#readme",
+  "scripts": {
+    "dev": "vite",
+    "build": "rs-build-pkg",
+    "preview": "vite preview",
+    "build-sb": "ladle build",
+    "sb": "ladle serve",
+    "test": "vitest --run --passWithNoTests",
+    "test:watch": "vitest",
+    "package": "npm run build && npm pack"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "1.9.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "4.8.0",
+    "react-redux": "8.0.5",
+    "react-router-dom": "6.10.0"
+  },
+  "devDependencies": {
+    "@ladle/react": "2.12.1",
+    "@testing-library/jest-dom": "5.16.5",
+    "@testing-library/react": "14.0.0",
+    "@testing-library/user-event": "14.4.3",
+    "@types/react": "18.0.32",
+    "@types/react-dom": "18.0.11",
+    "@types/styled-components": "5.1.26",
+    "@vitejs/plugin-react": "3.1.0",
+    "jsdom": "21.1.1",
+    "styled-components": "5.3.9",
+    "vite": "4.2.1",
+    "vite-plugin-dts": "2.1.0"
+  },
+  "files": [
+    "src",
+    "!**/*.test.*",
+    "!build",
+    "!**/*.spec.*",
+    "!**/*.stories.*",
+    "!**/tests/*.*",
+    "!**/.ladle/*.*",
+    "!**/.ladle-helpers/*.*"
+  ],
+  "types": "./src/index.ts",
+  "exports": {
+    "./components": "./src/components/index.ts",
+    "./elements": "./src/elements/index.ts",
+    "./library": "./src/library/index.ts",
+    ".": "./src/index.ts",
+    "./*": "./*"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "engines": {
+    "npm": ">=8.0.0 <10.0.0",
+    "node": ">=16.0.0 <19.0.0"
+  }
+}

@@ -1,0 +1,22 @@
+parser: "@typescript-eslint/parser"
+root: true
+
+parserOptions:
+  # project: "tsconfig.json"
+  sourceType: "module"
+  ecmaVersion: 2022
+
+ignorePatterns:
+  - "dist/*"
+  - "**/*.spec.ts"
+  - "**/*.test.ts"
+  - "**/*.js"
+  - "**/*.d.ts"
+  - "vitest.config.ts"
+
+extends:
+  - "plugin:@typescript-eslint/recommended"
+  - "plugin:prettier/recommended"
+
+rules:
+  "@typescript-eslint/no-empty-interface": off

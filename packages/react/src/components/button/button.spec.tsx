@@ -1,0 +1,15 @@
+import { render, screen } from '@utils/testing';
+import MyButton from './button.js';
+
+describe('Simple working test', () => {
+  it('the title is visible', () => {
+    render(<MyButton>Hello</MyButton>);
+    expect(screen.getByText(/Hello/i)).toBeInTheDocument();
+  });
+
+  // it('should increment count on click', async () => {
+  //   render(<App />);
+  //   userEvent.click(screen.getByRole('button'));
+  //   expect(await screen.findByText(/count is: 1/i)).toBeInTheDocument();
+  // });
+});

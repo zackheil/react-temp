@@ -1,0 +1,13 @@
+{
+  "extends": "@tsconfig/node18/tsconfig.json",
+  "compilerOptions": {
+    "module": "ES2022",
+    "strict": true,
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "useUnknownInCatchVariables": false,
+    "noUnusedLocals": true,
+    "moduleResolution": "nodenext",
+    "outDir": "bin"
+  }
+}

@@ -1,0 +1,1 @@
+This is a proof of concept for some react stuff stripped from a closed source codebase I'm working on.
