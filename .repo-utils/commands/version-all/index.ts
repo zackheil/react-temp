@@ -27,28 +27,30 @@ packageJsonFiles.forEach((file) => {
   const dependencies = packageJson.dependencies || {};
   const devDependencies = packageJson.devDependencies || {};
 
-  const updatedTfsDeps = (Object.entries(dependencies) as [string, string][])
-    .filter(([name]) => name.startsWith(ORG))
+  const updatedOrgDeps = (Object.entries(dependencies) as [string, string][])
+    .filter(([name]) => name.startsWith(`@${ORG}`))
     ?.reduce((acc, [name]) => {
       acc[name] = newVersion;
+      console.log(`    ${name}:*`, '→', newVersion);
       return acc;
     }, {} as Record<string, string>);
 
-  const updatedTfsDevDeps = (Object.entries(devDependencies) as [string, string][])
-    .filter(([name]) => name.startsWith(ORG))
+  const updatedOrgDevDeps = (Object.entries(devDependencies) as [string, string][])
+    .filter(([name]) => name.startsWith(`@${ORG}`))
     ?.reduce((acc, [name]) => {
       acc[name] = newVersion;
+      console.log(`    ${name}:*`, '→', newVersion);
       return acc;
     }, {} as Record<string, string>);
 
   packageJson.dependencies = {
     ...packageJson.dependencies,
-    ...updatedTfsDeps,
+    ...updatedOrgDeps,
   };
 
   packageJson.devDependencies = {
     ...packageJson.devDependencies,
-    ...updatedTfsDevDeps,
+    ...updatedOrgDevDeps,
   };
 
   writeFileSync(file, JSON.stringify(packageJson, null, 2));

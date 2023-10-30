@@ -1,5 +1,5 @@
 import { render, screen } from '@utils/testing';
-import { NavBar } from './nav-bar.js';
+import { NavBar } from './nav-bar';
 
 describe('Simple working test', () => {
   it('the title is visible', () => {

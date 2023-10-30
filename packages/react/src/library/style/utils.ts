@@ -1,5 +1,6 @@
-export const hexChangeShade = (hexColor: string, magnitude: number) => {
+export const hexChangeShade = (hexColor: string, magnitudeInteger: number) => {
   hexColor = hexColor.replace(`#`, ``);
+  const magnitude = Math.round(magnitudeInteger); // in case an integer wasn't passed in
 
   let [r, g, b] = [hexColor.slice(0, 2), hexColor.slice(2, 4), hexColor.slice(4, 6)].map((hex) => parseInt(hex, 16));
 
@@ -19,7 +20,7 @@ export const hexChangeShade = (hexColor: string, magnitude: number) => {
   }
 };
 
-export const addOpacity = (hexColor: string, opacity: number) => {
+export const changeOpacity = (hexColor: string, opacity: number) => {
   const sanitized = hexColor.replace(`#`, ``).slice(0,6);
   return `#${sanitized}${Math.round((opacity / 100) * 255)
     .toString(16)

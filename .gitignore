@@ -79,7 +79,7 @@ typings/
 # Next.js build output
 .next
 
-packages/react/dist/
+dist/
 build
 **/_demo.ts
 
@@ -110,3 +110,4 @@ build
 .tern-port
 
 .repo-utils/bin
+**/plugin-*/static-sites/index.ts

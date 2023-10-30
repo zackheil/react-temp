@@ -33,6 +33,7 @@ const Container = styled.div<{ size?: number }>`
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
+  margin-inline: 10px;
 `;
 
 const IconWrapper = styled.div<{ size?: number }>`

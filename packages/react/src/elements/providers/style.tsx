@@ -57,9 +57,17 @@ export const ThemedGlobalStyles = createGlobalStyle`
   body {
     background: ${({ theme }) => theme.background};
     color: ${({ theme }) => theme.text};
-    font-family: Kohinoor Bangla;
     margin: 0;
     padding: 0;
+  };
+  a {
+    color: ${({ theme }) => theme.text};
+    :hover {
+      color: ${({ theme }) => theme.text}
+    };
+    :visited {
+      color: ${({ theme }) => theme.text}
+    };
   }
 `;
 
@@ -223,8 +231,8 @@ export const ThemeProvider = ({
 }: {
   children: React.ReactNode;
   themeOverride?: 'light' | 'dark';
-  }) => {
-  console.log('theme override', themeOverride)
+}) => {
+  console.log('theme override', themeOverride);
   return (
     <_ThemeProvider theme={ComplexTheme[themeOverride || 'light']}>
       <MediaListenProvider queries={queries}>

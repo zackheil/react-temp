@@ -1,23 +1,31 @@
 import styled from 'styled-components';
-import NavBar from "../nav-bar/nav-bar";
+import NavBar from '../nav-bar/nav-bar';
+import Footer from '../footer/footer';
 
-export type AppLayoutComponent = (props: { title?: string; router: JSX.Element }) => React.ReactElement;
+export type IAppLayout = (props: { title?: string; router: React.ReactElement }) => React.ReactElement;
 
-export const DefaultLayout: AppLayoutComponent = ({title, router}) => {
+export const DefaultLayout: IAppLayout = ({ title, router }) => {
   return (
     <Container>
-      <NavBar title={title} />
-      {router}
+      <TopContentAlignedFlex>
+        <NavBar title={title} />
+        {router}
+      </TopContentAlignedFlex>
+      <Footer />
     </Container>
   );
 };
 
 const Container = styled.div`
-  height: 100%;
-  border: 1px solid red;
-  position: relative; 
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
-const NotFound = styled.div`
-  height: 100%;
+const TopContentAlignedFlex = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 `;

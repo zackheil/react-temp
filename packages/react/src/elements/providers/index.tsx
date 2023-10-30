@@ -1,3 +1,4 @@
+import { RTKProvider } from './redux/provider';
 import { ThemeProvider } from './style';
 
 export const Providers = ({
@@ -7,5 +8,9 @@ export const Providers = ({
   children: React.ReactNode;
   themeOverride?: 'light' | 'dark';
 }) => {
-  return <ThemeProvider themeOverride={themeOverride}>{children}</ThemeProvider>;
+  return (
+    <RTKProvider>
+      <ThemeProvider themeOverride={themeOverride}>{children}</ThemeProvider>
+    </RTKProvider>
+  );
 };

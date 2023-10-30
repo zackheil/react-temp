@@ -1,29 +1,14 @@
 {
-  "name": "@zackheil/npm",
+  "name": "@zackheil/tinkering",
   "version": "0.0.0",
-  "description": "",
-  "license": "UNLICENSED",
   "workspaces": [
     "packages/*",
     ".repo-utils"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rapidstack/npm.git"
-  },
-  "author": {
-    "name": "Zack Heil",
-    "url": "https://github.com/zackheil"
-  },
-  "bugs": {
-    "url": "https://github.com/rapidstack/npm/issues"
-  },
-  "homepage": "https://github.com/rapidstack/npm#readme",
   "scripts": {
-    "ci-cd": "npm ci --quiet --no-fund && npm i --quiet --no-fund",
-    "prime": "npm i --quiet --no-fund && husky install && npm i --quiet --no-fund",
+    "ci-cd": "npm run init -w .repo-utils && npm ci --quiet --no-fund",
+    "prime": "npm run init -w .repo-utils && npm i --quiet --no-fund",
     "build": "rs-build-all",
-    "publish-all": "rs-publish-all",
     "test": "npm run test -ws --if-present",
     "lint": "npm run lint -ws --if-present",
     "draw": "rs-draw",
@@ -32,17 +17,17 @@
   },
   "devDependencies": {
     "@zackheil/repo-utils": "*",
-    "@tsconfig/node18": "1.0.1",
-    "@types/node": "18.15.11",
-    "@typescript-eslint/eslint-plugin": "5.57.0",
-    "@typescript-eslint/parser": "5.57.0",
-    "eslint": "8.37.0",
-    "eslint-config-prettier": "8.8.0",
-    "eslint-plugin-prettier": "4.2.1",
+    "@tsconfig/node18": "18.2.2",
+    "@types/node": "20.8.6",
+    "@typescript-eslint/eslint-plugin": "6.7.5",
+    "@typescript-eslint/parser": "6.7.5",
+    "eslint": "8.51.0",
+    "eslint-config-prettier": "9.0.0",
+    "eslint-plugin-prettier": "5.0.1",
     "husky": "8.0.3",
-    "prettier": "2.8.7",
-    "typescript": "5.0.3",
-    "vitest": "0.29.8"
+    "prettier": "3.0.3",
+    "typescript": "5.2.2",
+    "vitest": "0.34.6"
   },
   "engines": {
     "npm": ">=8.0.0 <10.0.0",

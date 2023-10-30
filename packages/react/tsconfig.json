@@ -16,6 +16,8 @@
     "jsx": "react-jsx", //todo: change?
     "declaration": true,
     "outDir": "dist",
+    "declarationMap": true,
+    "sourceMap": true,
     "paths": {
       "@utils/testing": ["./src/.meta-utils/test.ts"],
       "@utils/stories": ["./src/.meta-utils/stories.ts"]

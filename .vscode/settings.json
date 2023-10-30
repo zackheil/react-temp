@@ -38,7 +38,7 @@
     {
       "icon": "nsri",
       "filename": true,
-      "extensions": ["qodana.yml", "qodana.sarif.json"],
+      "extensions": ["qodana.yaml", "qodana.sarif.json"],
       "format": "svg",
       "overrides": "yaml"
     },
@@ -55,4 +55,8 @@
     { "icon": "tools", "extensions": [".repo-utils"], "format": "svg" },
     { "icon": "json", "extensions": ["inputs"], "format": "svg" }
   ],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.tsserver.maxTsServerMemory": 8192,
+  "typescript.preferences.quoteStyle": "single",
+  "typescript.tsserver.log": "off"
 }
